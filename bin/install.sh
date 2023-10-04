@@ -1,0 +1,1 @@
+# A script to install your CLI, typically using pip.

@@ -1,19 +1,10 @@
-# Typer-based CLI entry point
 import typer
 from transformers import pipeline
 
 app = typer.Typer()
 
 @app.command()
-def dummy(arg1: str, arg2: int):
-    """
-    My CLI command description.
-    """
-    typer.echo(f"Argument 1: {arg1}")
-    typer.echo(f"Argument 2: {arg2}")
-
-@app.command()
-def sentiment(text: str):
+def sentiment_analysis(text: str):
     # Load the sentiment-analysis pipeline from Hugging Face
     sentiment_classifier = pipeline("sentiment-analysis")
 
@@ -29,6 +20,3 @@ def sentiment(text: str):
     typer.echo(f"Text: {text}")
     typer.echo(f"Sentiment Label: {sentiment_label}")
     typer.echo(f"Sentiment Score: {sentiment_score}")
-
-if __name__ == "__main__":
-    app()
