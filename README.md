@@ -24,19 +24,18 @@ git clone https://github.com/diegopenuela/genAI-cli
 cd genAI-cli
 
 2. **Build the Docker Image:**
-docker build -t genai-cli-image -f docker/Dockerfile .
+docker build -t genai-cli-image .
 
 3. **Run the CLI:**
-docker run -it genai-cli-image
-
+docker run -it genai-cli-image /bin/bash
 
 ## Usage
 MyCLI provides the following commands:
 
-- `test arg1 arg2`: Dummy commands that receives two dummy string arguments
+- `dummy arg1 arg2`: Dummy commands that receives a string argument and a integer argument
 
 Example:
-python app.py test hello world
+python app.py dummy falcon 9
 
 ## Configuration
 
@@ -50,7 +49,7 @@ Make sure to create a `.env` file and populate it with the necessary values for 
 
 ## Deployment
 
-genAI-CLI can be deployed locally using Docker. For production deployment, consider using a serverless environment using AWS Lambda, S3, API Gateway, and securing your configuration data using AWS Secrets Manager.
+genAI-CLI can be deployed locally using Docker. For production deployment, will involve creating executable packages that users can install and run on their local machines.
 
 ## Contributing
 

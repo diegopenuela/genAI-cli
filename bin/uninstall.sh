@@ -1,0 +1,1 @@
+# A script for uninstalling your CLI.
